@@ -58,13 +58,13 @@ Take a look at how the routes are broken into folders. This is a very easy way t
 Take a look at the index.html page.
 * `devmtnTravel` is included as the name of our app. ng-app="devmtnTravel"
 * A navigation menu has been created that's going to be at the top of the page for every route - Also, notice that they don't do anything yet. They aren't linked to any views.
-* The ui-router script tag is separate from Angular. It doesn't come built in with Angular
-* &lt;ui-view></ui-view&gt; is included and inside of our index.html
+* The ui-router script tag is separate from Angular. It doesn't come built in with Angular.
+* <ui-view></ui-view> is included and inside of our index.html
 
 
-The &lt;ui-view></ui-view&gt; element and it's placement is crucial to understanding how routing works.
+The <ui-view></ui-view> element and its placement is crucial to understanding how routing works.
 The router is going to take that element and inject certain templates (html pages) into it depending on which route we're using.
-The template that is injected into the &lt;ui-view></ui-view&gt; element depends entirely on what we specify in using the `$stateProvider` object in our app.js file.
+The template that is injected into the <ui-view></ui-view> element depends entirely on what we specify in using the `$stateProvider` object in our app.js file.
 Creating a router this way allows us to dynamically switch templates and controllers based on the URL.
 
 Once you feel VERY comfortable with the existing codebase, move on to the next step.
@@ -253,7 +253,7 @@ We want to gain access to the travelInfo data that is present in our mainSrv by 
 
 Go ahead and delete the test variables you made and create new $scope variables that are accessible in the html view and associate them with the data that was pulled from the service files.
 
-If you followed the steps located in the views then you should see the data from the service on the page. If you dont see anything make sure your getting the data in your controller from the service.
+If you followed the steps located in the views then you should see the data from the service on the page. If you don't see anything make sure your getting the data in your controller from the service.
 
 * Note: The information on the booked.html view  will not display until we configure the data to the specific state by id.
 
@@ -265,7 +265,7 @@ If you followed the steps located in the views then you should see the data from
 
 Let's start by injecting $state into the bookedCtrl, if you console.log($state) you will see that we get a ton of info about our application state. What we need is the $state.params, this will give us the id being passed though the url params
 
-Now that we have the $state.params "id" we can loop over the data we are getting from our service and check if we have a object that has the same id as the $state.params, if we find a object that has that id then set that object on a $scope variable and then attach that variable to the booked view using {{}}
+Now that we have the $state.params "id" we can loop over the data we are getting from our service and check if we have a object that has the same id as the $state.params, if we find an object that has that id then set that object on a $scope variable and then attach that variable to the booked view using {{}}
 
 
 ### Resources
